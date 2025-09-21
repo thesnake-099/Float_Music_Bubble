@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BubbleApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.BubbleApp" parent="Base.Theme.BubbleApp" />
+
+
+    <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColor">@color/text_input_text_color</item>
+        <item name="hintTextColor">@color/text_input_hint_color</item>
+        <item name="boxStrokeColor">@color/text_input_border_color</item>
+    </style>
+
+</resources>

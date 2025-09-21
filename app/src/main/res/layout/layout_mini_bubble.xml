@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="64dp"
+    android:layout_height="64dp">
+
+    <ImageView
+        android:id="@+id/mini_bubble_icon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/app_logo"
+        android:scaleType="centerInside"
+        android:padding="8dp"/>
+
+</FrameLayout>

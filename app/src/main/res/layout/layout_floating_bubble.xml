@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:gravity="center_vertical">
+
+    <!-- The expanded panel with app icons and a dedicated close handle -->
+    <LinearLayout
+        android:id="@+id/expandedPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/floating_bg"
+        android:elevation="4dp"
+        android:padding="8dp"
+        android:layout_marginStart="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <!-- Container for the app icons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/iconYoutube"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="5dp"
+                android:background="@drawable/floating_btn_bg"
+                android:src="@drawable/ic_youtube" />
+
+            <ImageView
+                android:id="@+id/iconChatGpt"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:padding="5dp"
+                android:background="@drawable/floating_btn_bg"
+                android:src="@drawable/ic_chatgpt" />
+
+            <!-- NEW: Google Translator Icon -->
+            <ImageView
+                android:id="@+id/iconGoogleTranslator"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:padding="5dp"
+                android:background="@drawable/floating_btn_bg"
+                android:src="@drawable/ic_googletrans" />
+            <ImageView
+                android:id="@+id/iconCustomUrl"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:padding="5dp"
+                android:background="@drawable/floating_btn_bg"
+                android:src="@drawable/ic_web" />
+
+        </LinearLayout>
+
+        <!-- The handle to collapse the panel -->
+        <ImageView
+            android:id="@+id/collapseHandle"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_back"
+            />
+    </LinearLayout>
+
+    <!-- The collapsed handle that is always visible when panel is closed -->
+    <FrameLayout
+        android:layout_marginStart="5dp"
+        android:id="@+id/collapsedHandle"
+        android:layout_width="30dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_vertical"
+        android:elevation="0dp">
+
+        <FrameLayout
+            android:layout_marginStart="5dp"
+            android:layout_width="10dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/floating_bg"
+            android:elevation="0dp">
+
+        </FrameLayout>
+
+        <ImageView
+            android:layout_marginStart="-5dp"
+            android:rotation="180"
+            android:layout_gravity="center"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_back"
+            />
+
+    </FrameLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="120dp"
+    android:background="@drawable/background_mini_player_rounded"
+    android:elevation="12dp"
+    android:clipToOutline="true">
+
+    <!-- This is where the video player View will be placed -->
+    <FrameLayout
+        android:background="@drawable/background_mini_player_rounded"
+        android:id="@+id/video_container"
+        android:layout_width="180dp"
+        android:layout_height="120dp" />
+
+    <!-- A simple close button in the top-right corner -->
+    <ImageView
+        android:id="@+id/close_mini_player_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="4dp"
+        android:src="@drawable/ic_close"
+        android:background="#80000000"
+        android:padding="4dp"
+        android:contentDescription="Close Mini Player" />
+
+</FrameLayout>

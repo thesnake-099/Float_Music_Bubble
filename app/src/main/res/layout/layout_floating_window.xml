@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?><!-- The root MUST be a RelativeLayout to correctly position external controls -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- This is the main visual window that contains the WebView -->
+    <LinearLayout
+        android:id="@+id/window_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/background_floating_window_rounded"
+        android:clipToOutline="true"
+        android:elevation="10dp"
+        android:orientation="vertical">
+
+        <!-- The Dark Title Bar -->
+        <RelativeLayout
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/background_window_title">
+
+            <TextView
+                android:id="@+id/windowTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="40dp"
+                android:text="Smart Bubble"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <!-- This is the Back button, it is now part of the title bar -->
+            <ImageView
+                android:id="@+id/buttonBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_back"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/buttonMinimize"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:layout_toStartOf="@id/buttonClose"
+                android:padding="4dp"
+                android:src="@drawable/ic_minimize" />
+
+            <ImageView
+                android:id="@+id/buttonClose"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_close" />
+        </RelativeLayout>
+
+        <!-- The content area with WebView and ProgressBar -->
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-6dp"
+                android:layout_marginBottom="-6dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Container for the EXTERNAL controls, positioned below the main window -->
+    <LinearLayout
+        android:id="@+id/controls_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/window_root"
+        android:layout_alignStart="@id/window_root"
+        android:layout_alignEnd="@id/window_root"
+        android:layout_marginStart="-30dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginEnd="-30dp"
+        android:elevation="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- External Resize Handle (Left Corner) -->
+        <ImageView
+            android:id="@+id/resizeHandleBottomLeft"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:rotation="380"
+            android:src="@drawable/ic_bottom_left"
+            app:tint="@color/cardStroke" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- External Move Handle -->
+        <ImageView
+            android:id="@+id/moveHandle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_mover"
+            app:tint="@color/cardStroke" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- External Resize Handle (Right Corner) -->
+        <ImageView
+            android:id="@+id/resizeHandleBottomRight"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:rotation="260"
+            android:src="@drawable/ic_bottom_left"
+            app:tint="@color/cardStroke" />
+    </LinearLayout>
+</RelativeLayout>

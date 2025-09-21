@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="cardStroke">#FFC107</color>
+    <color name="textPrimary">#000000</color>
+    <color name="textSecondary">#979595</color>
+    <color name="titlebackground">#353434</color>
+
+
+
+    <color name="switch_thumb_on">#FFC107</color> <!-- The color of the circle when ON (e.g., a nice purple) -->
+    <color name="switch_track_on">#979595</color> <!-- The color of the track when ON (e.g., a light purple) -->
+
+    <color name="switch_thumb_off">#9E9E9E</color> <!-- The color of the circle when OFF (e.g., grey) -->
+    <color name="switch_track_off">#E0E0E0</color> <!-- The color of the track when OFF (e.g., light grey) -->
+
+    <color name="text_input_border_color">#FFC107</color>
+    <color name="text_input_hint_color">#979595</color>
+    <color name="text_input_text_color">#000000</color>
+    <color name="iconmover">#EDE9DE</color>
+
+    <color name="spotlight_overlay">#CC000000</color>
+</resources>
