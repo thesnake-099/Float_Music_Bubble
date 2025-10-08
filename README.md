@@ -1,6 +1,7 @@
 # Smart Bubble - Floating Multitasking Browser for Android
 
-  [WhatsApp Image 2025-10-08 at 19 03 28_f13e57b5](https://github.com/user-attachments/assets/abeb85df-1836-4313-91a0-8d912ae84844)
+![Screenshots](https://github.com/user-attachments/assets/ba328f4b-8dd0-4c0d-a07d-b7f037ef4093)
+
 
 
 Smart Bubble is a sophisticated multitasking utility for Android that allows users to open web pages in a movable and resizable floating window. It provides seamless, on-the-fly access to essential web apps like YouTube, ChatGPT, and Google Translate without forcing the user to leave their current application.
